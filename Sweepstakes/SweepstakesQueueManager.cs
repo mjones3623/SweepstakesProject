@@ -8,6 +8,11 @@ namespace Sweepstakes
 {
     class SweepstakesQueueManager : ISweepstakesManager
     {
+        //Variables
+
+        Queue<Sweepstakes> queue;
+
+
         public Sweepstakes GetSweepstakes()
         {
             throw new NotImplementedException();
@@ -15,7 +20,10 @@ namespace Sweepstakes
 
         public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
-            throw new NotImplementedException();
+            queue = new Queue<Sweepstakes>();
+
+            queue.Enqueue(sweepstakes);
+
         }
     }
 }
