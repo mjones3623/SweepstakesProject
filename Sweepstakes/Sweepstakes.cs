@@ -43,16 +43,26 @@ namespace Sweepstakes
            
             
         }
-        public Contestant ChooseContestWinner(Contestant contestant)
+        public Contestant ChooseContestWinner(Contestant contestant,Random rnd)
         {
-            List < Contestant > SweepstakesList = new List<Contestant>();
-            foreach (KeyValuePair<int, Contestant>pair in contestants)
+            List<Contestant> sweepstakesList = new List<Contestant>();
+            foreach (KeyValuePair<int, Contestant> pair in contestants)
             {
-                SweepstakesList.Add(pair.value);
-                
-            }
-            return contestant;
+                sweepstakesList.Add(pair.Value);
 
+            }
+            
+            Contestant sweepstakesWinner = sweepstakesList[rnd.Next(0, sweepstakesList.Count)];
+
+            return sweepstakesWinner;
+        }
+        public void PrintContestantList()
+        {
+            foreach (KeyValuePair<int, Contestant> pair in contestants)
+            {
+                Console.WriteLine("Registration#:  "+pair.Value.registrationNumber+"  Name:  "+pair.Value.firstName+" "+pair.Value.lastName+"  "+pair.Value.emailAddress+"");
+
+            }
         }
 
     }
