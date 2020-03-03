@@ -10,9 +10,9 @@ namespace Sweepstakes
     {
         //variables
         
-        public string firstName;
-        public string lastName;
-        public string emailAddress;
-        public int registrationNumber;
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string EmailAddress { get; set; }
+        public int RegistrationNumber { get; set; }
     }
 }

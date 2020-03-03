@@ -12,6 +12,13 @@ namespace Sweepstakes
         {
             Sweepstakes sweepstakes = new Sweepstakes();
             Contestant contestant = new Contestant();
+            SweepstakesQueueManager Queue = new SweepstakesQueueManager();
+            SweepstakesStackManager Stack = new SweepstakesStackManager();
+
+
+            MarketingFirm marketingFirm = new MarketingFirm(Stack);
+
+
 
             sweepstakes.RegisterContestant(contestant);
         }

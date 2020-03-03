@@ -34,12 +34,12 @@ namespace Sweepstakes
         //Methods
         public void RegisterContestant(Contestant contestant)
         {
-            contestant.registrationNumber = UserInterface.GetUserInputInt("Enter contestant's REGISTRATION NUMBER, then press enter:  ");
-            contestant.firstName = UserInterface.GetUserInputString ("Enter FIRST NAME of contestant, then hit enter: ");
-            contestant.lastName= UserInterface.GetUserInputString("Enter LAST NAME of contestant, then hit enter: ");
-            contestant.emailAddress = UserInterface.GetUserInputString("Enter contestant's EMAIL ADDRESS, then hit enter: ");
+            contestant.RegistrationNumber = UserInterface.GetUserInputInt("Enter contestant's REGISTRATION NUMBER, then press enter:  ");
+            contestant.FirstName = UserInterface.GetUserInputString ("Enter FIRST NAME of contestant, then hit enter: ");
+            contestant.LastName= UserInterface.GetUserInputString("Enter LAST NAME of contestant, then hit enter: ");
+            contestant.EmailAddress = UserInterface.GetUserInputString("Enter contestant's EMAIL ADDRESS, then hit enter: ");
 
-            contestants.Add(contestant.registrationNumber, contestant);
+            contestants.Add(contestant.RegistrationNumber, contestant);
            
             
         }
@@ -56,11 +56,11 @@ namespace Sweepstakes
 
             return sweepstakesWinner;
         }
-        public void PrintContestantList()
+        public void PrintContestantList(Contestant contestant)
         {
             foreach (KeyValuePair<int, Contestant> pair in contestants)
             {
-                Console.WriteLine("Registration#:  "+pair.Value.registrationNumber+"  Name:  "+pair.Value.firstName+" "+pair.Value.lastName+"  "+pair.Value.emailAddress+"");
+                Console.WriteLine("Registration#:  "+contestant.RegistrationNumber+"  Name:  "+contestant.FirstName+" "+contestant.LastName+"  "+contestant.EmailAddress+"");
 
             }
         }

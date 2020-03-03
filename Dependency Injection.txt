@@ -1,0 +1,1 @@
+In my Sweepstakes Project Dependency Injection us used in the MarketingFirm class.  Here, an “ISweepstakesManager manager” parameter is passed in to the MarketingFirm constructor which effectively eliminates dependency on the functionality otherwise required of multiple classes.  In this case SweepstakesStackManager and SweepstakesQueueManager.

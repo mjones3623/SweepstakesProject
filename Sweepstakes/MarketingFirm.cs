@@ -10,6 +10,19 @@ namespace Sweepstakes
     {
         //Variables
 
-        
+        ISweepstakesManager manager;
+
+        public MarketingFirm(ISweepstakesManager manager)
+        {
+            this.manager = manager;   
+        }
+        public void CreateSweepstakes()
+        {
+           
+            Sweepstakes sweepstakes = new Sweepstakes();
+            Console.WriteLine("Enter Sweepstakes Name: ");
+            sweepstakes.Name = Console.ReadLine();
+            manager.InsertSweepstakes(sweepstakes);
+        }
     }
 }
