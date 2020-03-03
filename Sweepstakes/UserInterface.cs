@@ -24,8 +24,8 @@ namespace Sweepstakes
         public static int GetRegistrationNumberInput(Contestant contestant)
         {
             Console.WriteLine("Enter the contestant's REGISTRATION NUMBER, then hit enter: ");
-            contestant.registrationNumber = Int32.Parse(Console.ReadLine());
-            return contestant.registrationNumber;
+            contestant.RegistrationNumber = Int32.Parse(Console.ReadLine());
+            return contestant.RegistrationNumber;
         }
 
 
